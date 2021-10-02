@@ -1,4 +1,27 @@
-<div class="container">
+<!-- <div class="container">
     <button class="btn btn-success" (click)="show()">Click Me</button>
     <button class="btn btn-info" (click)="show1()">Click Me1</button>
+</div> -->
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+                <td><button class="btn btn-danger">DELETE</button></td>
+            </tr>
+        </tbody>
+
+
+    </table>
 </div>

@@ -1,4 +1,17 @@
 <div class="container">
     <p>profile works!</p>
-<h4>ABi profile </h4>
+    <h4>ABi profile </h4>
+
+    <form>
+        <div class="form-group">
+           
+            <input type="text" [formControl]="name" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            
+            <input type="text" [formControl]="email" class="form-control" id="formGroupExampleInput2" placeholder="Enter your email">
+        </div>
+        <button (click)="save()" type="button" class="btn btn-primary">Save</button>
+    </form>
+
 </div>
