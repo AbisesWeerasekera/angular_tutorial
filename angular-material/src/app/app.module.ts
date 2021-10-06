@@ -17,13 +17,24 @@ import {MatInputModule} from '@angular/material/input';
 
 //register
 import {MatStepperModule} from '@angular/material/stepper';
+import { ProfileComponent } from './profile/profile.component';
 
+//profile card
+import {MatCardModule} from '@angular/material/card';
+//profile expansion panel
+import {MatExpansionModule} from '@angular/material/expansion';
+
+//profile dialog box
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogContentExampleDialogComponent } from './profile/dialog-content-example-dialog/dialog-content-example-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent,
+    DialogContentExampleDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +47,10 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatStepperModule
+    MatStepperModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
