@@ -27,6 +27,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 //profile dialog box
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogContentExampleDialogComponent } from './profile/dialog-content-example-dialog/dialog-content-example-dialog.component';
+import { TableComponent } from './table/table.component';
+
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { DialogContentExampleDialogComponent } from './profile/dialog-content-ex
     RegisterComponent,
     ProfileComponent,
     DialogContentExampleDialogComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,8 @@ import { DialogContentExampleDialogComponent } from './profile/dialog-content-ex
     MatStepperModule,
     MatCardModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
