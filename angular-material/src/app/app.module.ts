@@ -30,6 +30,7 @@ import { DialogContentExampleDialogComponent } from './profile/dialog-content-ex
 import { TableComponent } from './table/table.component';
 
 import {MatTableModule} from '@angular/material/table';
+import { CevolutionComponent } from './cevolution/cevolution.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {MatTableModule} from '@angular/material/table';
     ProfileComponent,
     DialogContentExampleDialogComponent,
     TableComponent,
+    CevolutionComponent,
   ],
   imports: [
     BrowserModule,
