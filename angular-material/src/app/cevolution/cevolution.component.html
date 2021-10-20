@@ -1,6 +1,22 @@
 <h3>Code evoultion tutorials</h3>
-<h4>Property binding</h4>
-<br/>
 
+<h4>Property binding example</h4>
+<br/>
 <input [id]="myId" type="text" value="abises">
+<br>
+
+<h3>Class Binding</h3>
+<h3 class="text_success">Class Binding example</h3>
+<h3 [class.text-warning]="hasError">Class Binding example</h3>
+<h3 [class]="successClass">Class Binding example</h3>
+<h3 [ngClass]="messageClass">Class Binding example</h3>
+
+<br/>
+<h3>Style binding</h3>
+<h4 [style.color]="'red'">Style binding</h4>
+<h4 [style.color]="highlight">Style binding</h4>
+<h4 [style.color]="hasError?'green':'blue'">Style binding</h4>
+<h4 [ngStyle]="title">Style binding</h4>
+
+
 
