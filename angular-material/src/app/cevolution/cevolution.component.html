@@ -18,5 +18,17 @@
 <h4 [style.color]="hasError?'green':'blue'">Style binding</h4>
 <h4 [ngStyle]="title">Style binding</h4>
 
+<br/>
+<h4>Evetn Binding</h4>
+<button (click)="onClick1()">Click me</button>
+<h5>Hi Abises{{greeting}}</h5>
+<button (click) = "onClick($event)">Event details</button>
+<h5>Hi Abises{{greeting}}</h5>
+<br/>
+
+<h4>Template reference Variables</h4>
+<input #myInput type="text">
+<button (click)="onClick2(myInput.value)">Log button</button>
+
 
 

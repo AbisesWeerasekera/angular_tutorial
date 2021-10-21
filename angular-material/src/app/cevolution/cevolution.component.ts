@@ -27,9 +27,29 @@ public title = {
   fontStyle : "italic"
 }
 
+public greeting="";//event binding
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  //event binding
+  // 
+  
+  onClick1(){
+    console.log("Welcome Abises");
+    this.greeting="Welcome SLT";
+  }
+
+  onClick(event:any){
+    console.log(event.type); //event means an associative array
+    this.greeting="Welcome SLT"+event;
+  }
+
+  onClick2(value:any){
+    console.log("this is the value you have entered ="+value);
+
+}
 
 }
