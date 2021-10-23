@@ -32,6 +32,8 @@ import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import { CevolutionComponent } from './cevolution/cevolution.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,8 @@ import { CevolutionComponent } from './cevolution/cevolution.component';
     MatCardModule,
     MatExpansionModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

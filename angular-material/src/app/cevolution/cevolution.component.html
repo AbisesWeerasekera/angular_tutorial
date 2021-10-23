@@ -29,6 +29,11 @@
 <h4>Template reference Variables</h4>
 <input #myInput type="text">
 <button (click)="onClick2(myInput.value)">Log button</button>
+<br/>
+<hr/>
+<h3>Two way binding </h3>
+
+<input [(ngModel)]="name" type="text">{{name}}
 
 
 

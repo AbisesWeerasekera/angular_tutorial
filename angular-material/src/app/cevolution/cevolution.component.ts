@@ -9,25 +9,27 @@ export class CevolutionComponent implements OnInit {
   //properties
   //property binding
   public myId = "textid";
- //----
+  //----
   //class binding
   public successClass = "text_warning";
   public hasError = false;
 
-  public messageClass={ //object
-    "text_success" : !this.hasError,
-    "text_warning":this.hasError
-  } 
-//----
+  public messageClass = { //object
+    "text_success": !this.hasError,
+    "text_warning": this.hasError
+  }
+  //----
 
-//style binding
-public highlight = "orange";
-public title = {
-  color:"brown",
-  fontStyle : "italic"
-}
+  //style binding
+  public highlight = "orange";
+  public title = {
+    color: "brown",
+    fontStyle: "italic"
+  }
 
-public greeting="";//event binding
+  public greeting = "";//event binding
+
+  public name="";
 
   constructor() { }
 
@@ -36,20 +38,23 @@ public greeting="";//event binding
 
   //event binding
   // 
-  
-  onClick1(){
+
+  onClick1() {
     console.log("Welcome Abises");
-    this.greeting="Welcome SLT";
+    this.greeting = "Welcome SLT";
   }
 
-  onClick(event:any){
+  onClick(event: any) {
     console.log(event.type); //event means an associative array
-    this.greeting="Welcome SLT"+event;
+    this.greeting = "Welcome SLT" + event;
   }
 
-  onClick2(value:any){
-    console.log("this is the value you have entered ="+value);
+  onClick2(value: any) {
+    console.log("this is the value you have entered =" + value);
 
-}
+  }
+
+
+
 
 }
