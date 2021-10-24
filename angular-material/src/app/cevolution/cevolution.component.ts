@@ -29,7 +29,15 @@ export class CevolutionComponent implements OnInit {
 
   public greeting = "";//event binding
 
-  public name="";
+  public name="";//two way binding
+
+  public displayName=true; //Structural directives ngIf directive
+  public displayName1 = false;//Structural directives *ngIf directive ex1
+  public displayName2 = false;//Structural directives *ngIf directive ex2
+
+  public switchcolor="blue";//structural directives ngSwitch
+
+  public colors=["red","blue","green","yellow"] //structural directives ngFor => This is the resource array
 
   constructor() { }
 

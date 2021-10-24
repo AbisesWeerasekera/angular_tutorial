@@ -1,39 +1,78 @@
-<h3>Code evoultion tutorials</h3>
+<h1>Code evoultion tutorials</h1>
 
-<h4>Property binding example</h4>
+<h2>Property binding example</h2>
 <br/>
 <input [id]="myId" type="text" value="abises">
 <br>
+<hr/>
 
-<h3>Class Binding</h3>
+<h2>Class Binding</h2>
 <h3 class="text_success">Class Binding example</h3>
 <h3 [class.text-warning]="hasError">Class Binding example</h3>
 <h3 [class]="successClass">Class Binding example</h3>
 <h3 [ngClass]="messageClass">Class Binding example</h3>
-
+<hr/>
 <br/>
-<h3>Style binding</h3>
+<h2>Style binding</h2>
 <h4 [style.color]="'red'">Style binding</h4>
 <h4 [style.color]="highlight">Style binding</h4>
 <h4 [style.color]="hasError?'green':'blue'">Style binding</h4>
 <h4 [ngStyle]="title">Style binding</h4>
-
+<hr/>
 <br/>
-<h4>Evetn Binding</h4>
+<h2>Evetn Binding</h2>
 <button (click)="onClick1()">Click me</button>
 <h5>Hi Abises{{greeting}}</h5>
 <button (click) = "onClick($event)">Event details</button>
 <h5>Hi Abises{{greeting}}</h5>
 <br/>
-
-<h4>Template reference Variables</h4>
+<hr/>
+<h2>Template reference Variables</h2>
 <input #myInput type="text">
 <button (click)="onClick2(myInput.value)">Log button</button>
 <br/>
 <hr/>
-<h3>Two way binding </h3>
 
+<h2>Two way binding </h2>
 <input [(ngModel)]="name" type="text">{{name}}
+<br>
+<hr>
 
+<h2>Structural directives  - <b>ngIf</b></h2>
+<h3 *ngIf="displayName">This is a ngIf directive applied </h3>
+<!-- lets look at with else block - Example 1 -->
+<h3 *ngIf="displayName1 ; else elseblock">Code evolution</h3>
 
+<ng-template  #elseblock>
+    <h3>Abises is visible</h3>
+</ng-template>
+
+<!-- lets look at with else block - Example 2 -->
+
+<div *ngIf="displayName2 then thenBlock;else elseBlock1"></div>
+
+<ng-template #thenBlock>
+    <h2>Code evolution version2</h2>
+</ng-template>
+
+<ng-template #elseBlock1>
+    <h2>Abises is visible version 2</h2>
+</ng-template>
+<br>
+<hr>
+
+<h3>ngSwitch directive</h3>
+<div [ngSwitch]="switchcolor">
+    <div *ngSwitchCase="'red'">You picked red color</div>
+    <div *ngSwitchCase="'blue'">You picked blue color</div>
+    <div *ngSwitchCase="'yellow'">You picked yellow color</div>
+    <div *ngSwitchDefault>Pick again</div>
+</div>
+<br>
+<hr>
+
+<h3>Ng For directive</h3>
+<div *ngFor = "let color of colors;index as i;first as f;last as l;even as e;odd as o">
+    <h4> {{o}} {{l}} {{e}} {{f}} {{i}} {{color}}</h4>
+</div>
 
