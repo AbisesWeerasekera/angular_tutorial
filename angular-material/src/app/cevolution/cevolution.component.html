@@ -75,4 +75,22 @@
 <div *ngFor = "let color of colors;index as i;first as f;last as l;even as e;odd as o">
     <h4> {{o}} {{l}} {{e}} {{f}} {{i}} {{color}}</h4>
 </div>
+<br>
+<hr>
 
+<h3>Angular pipes</h3>
+<h5>{{myname}}</h5>
+<h5>{{myname|lowercase}}</h5>
+<h5>{{myname|uppercase}}</h5>
+<h5>{{myname|slice:3}}</h5>
+<h5>{{myname|slice:3:5}}</h5>
+<h5>{{person|json}}</h5>
+<h5>{{5.678|number:'2.4-5'}}</h5>
+<h5>{{0.25|percent}}</h5>
+<h5>{{0.25|currency}}</h5>
+<h5>{{0.25|currency:'INR'}}</h5>
+<h5>{{0.25|currency:'GBP':'code'}}</h5>
+<h5>{{date}}</h5>
+<h5>{{date|date:'short'}}</h5>
+<h5>{{date|date:'shortDate'}}</h5>
+<h5>{{date|date:'shortTime'}}</h5>

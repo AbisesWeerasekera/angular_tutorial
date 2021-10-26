@@ -39,6 +39,14 @@ export class CevolutionComponent implements OnInit {
 
   public colors=["red","blue","green","yellow"] //structural directives ngFor => This is the resource array
 
+public myname="Abises";//pipes
+public person={//pipes json object
+  "firstName":"John",
+  "lastName":"Doe"
+}
+
+public date=new Date();//pipes
+
   constructor() { }
 
   ngOnInit(): void {

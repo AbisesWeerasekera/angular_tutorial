@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-
+  
   <mat-toolbar-row>
     <span>Abises Angular</span>
     <span class="example-spacer"></span>
@@ -11,5 +11,15 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-
 <router-outlet></router-outlet>
+<h3>{{message}}</h3>
+<app-child (childEvent)="message=$event" [parentData]="name"></app-child>
+<br>
+<br>
+<h1>employee list component(use service class common array)</h1>
+<hr>
+<app-employee-list></app-employee-list>
+<h1>employee details component(use service class common array)</h1>
+<hr>
+<app-employee-details></app-employee-details>
+
