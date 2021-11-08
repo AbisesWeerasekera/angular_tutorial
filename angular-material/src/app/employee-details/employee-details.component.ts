@@ -8,12 +8,24 @@ import { EmployeeService } from '../employee.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
- public employee:any=[];
+  /*20 VIDEO
+ belongs to retrieve data without a mock server at assests
+   only retrieved from employee.service.ts 
+//  public employee:any=[];
 
-  constructor(private _employeeService:EmployeeService) { }
+//   constructor(private _employeeService:EmployeeService) { }
 
-  ngOnInit(): void {
-    this.employee=this._employeeService.getEmployees();
+//   ngOnInit(): void {
+//     this.employee=this._employeeService.getEmployees();
+//   }
+*/
+
+  public employee:any=[];
+
+  constructor(private _employeeService:EmployeeService){}
+
+  ngOnInit():void{
+    this._employeeService.getEmployees().subscribe(data=>this.employee=data);
   }
 
 }

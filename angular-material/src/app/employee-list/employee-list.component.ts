@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
+import { Subscription } from 'rxjs/internal/Subscription';
 
 @Component({
   selector: 'app-employee-list',
@@ -7,13 +8,24 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
+  /*20 VIDEO
+ belongs to retrieve data without a mock server at assests
+   only retrieved from employee.service.ts 
+ // public employee: any = [];
+
+ // constructor(private _employeeService: EmployeeService) {
+ // }
+
+ // ngOnInit(): void {
+ //   this.employee = this._employeeService.getEmployees();
+ // }
+*/
+
   public employee: any = [];
 
-  constructor(private _employeeService: EmployeeService) {
-  }
+  constructor(private _employeeService: EmployeeService) { }
 
-  ngOnInit(): void {
-    this.employee = this._employeeService.getEmployees();
+  ngOnInit() {
+    this._employeeService.getEmployees().subscribe(data => this.employee = data);
   }
-
 }
