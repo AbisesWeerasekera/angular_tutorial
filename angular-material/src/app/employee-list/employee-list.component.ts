@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
-import { Subscription } from 'rxjs/internal/Subscription';
+
 
 @Component({
   selector: 'app-employee-list',
@@ -27,5 +27,6 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit() {
     this._employeeService.getEmployees().subscribe(data => this.employee = data);
+    
   }
 }
