@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule,routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 
 //Use a common array (routingComponent) in app-routing.module.ts to store emplist and deplist,DRY
 // import { DepartmentListComponent } from './department-list/department-list.component';
@@ -13,7 +15,9 @@ import { AppComponent } from './app.component';
     AppComponent,
     // DepartmentListComponent,
     // EmployeeListComponent
-    routingComponent
+    routingComponent,
+    PageNotFoundComponent,
+    DepartmentDetailComponent
   ],
   imports: [
     BrowserModule,
