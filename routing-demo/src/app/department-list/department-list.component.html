@@ -1,4 +1,4 @@
 <p>department-list works!</p>
 <div (click)="onSelect(department)" *ngFor="let department of departments">
-    <h3>{{department.id}} || {{department.name}}</h3>
+    <h3 [class.selected]="isSelected(department)">{{department.id}} || {{department.name}}</h3>
 </div>
